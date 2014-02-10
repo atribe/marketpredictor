@@ -9,7 +9,7 @@
   <name>Market Predictor</name>
   
     <properties>
-        <spring.version>3.2.5.RELEASE</spring.version>
+        <spring.version>4.0.0.RELEASE</spring.version>
         <slf4j.version>1.7.5</slf4j.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -37,7 +37,14 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.0.1</version>
+            <scope>provided</scope>
         </dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+			<scope>provided</scope>
+		</dependency>
         
 		<dependency>
 			<groupId>commons-dbcp</groupId>
