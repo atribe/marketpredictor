@@ -81,16 +81,22 @@
 	</dependencies>
 
     <build>
+    	<resources>
+			<resource>
+				<directory>src/main/java</directory>
+			</resource>
+		</resources>
         <plugins>
 
             <!-- Compiler -->
 
             <plugin>
+            	<groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.6</source>
+                    <target>1.6</target>
                 </configuration>
             </plugin>
 
@@ -118,6 +124,19 @@
                     <scanIntervalSeconds>10</scanIntervalSeconds>
                 </configuration>
             </plugin>
+            
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<useProjectReferences>false</useProjectReferences>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>false</downloadJavadocs>
+					<wtpversion>2.0</wtpversion>
+				</configuration>
+			</plugin>
         </plugins>
     </build>
 </project>
